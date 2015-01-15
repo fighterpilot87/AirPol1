@@ -1,7 +1,7 @@
-# AirPol1
-Programming Assignment 1: Air Pollution
+## AirPol1
+##Programming Assignment 1: Air Pollution
 
-# pollutantmean <- function(directory, pollutant, id = 1:332) {
+## pollutantmean <- function(directory, pollutant, id = 1:332) {
         ## 'directory' is a character vector of length 1 indicating
         ## the location of the CSV files
 
@@ -14,4 +14,4 @@ Programming Assignment 1: Air Pollution
 
         ## Return the mean of the pollutant across all monitors list
         ## in the 'id' vector (ignoring NA values)
-#}
+##}
