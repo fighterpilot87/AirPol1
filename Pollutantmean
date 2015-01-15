@@ -1,0 +1,6 @@
+pollutantmean<-function(specdata, sulfate,id=1:332){
+  
+  nc=ncol(specdata)
+  means<-numeric(nc)
+  means[i]<-mean
+}
