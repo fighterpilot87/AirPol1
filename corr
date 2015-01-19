@@ -1,0 +1,29 @@
+corr <- function(directory, threshold = 0) { 
+  
+  files_full <- list.files(directory, full.names=TRUE)
+  dat <- data.frame()
+  compcas <- data.frame()
+  nobslist <- vector()
+  tmp <- vector()
+  
+  tmp <- lapply(files_full, read.csv)
+  nonatmp <- na.omit(tmp)
+  head(tmp)
+  #for(i in 1:332){
+    
+  #  dat <- rbind(dat, read.csv(files_full[i]))
+  #  nonadat <- na.omit(dat)
+    
+  #  compcas <- (complete.cases(dat[i]))
+  #  nobs <- sum(compcas)
+    
+  #  if(nobs > threshold) {
+  #    nobs
+      #nobslist <- c(nobslist, cor(dat$sulfate, dat$nitrate))
+      
+  #  }
+
+  #}    
+  #head(nobslist)
+  
+}
