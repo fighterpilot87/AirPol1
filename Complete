@@ -1,0 +1,23 @@
+##Complete.R
+
+complete <- function(directory, id = 1:332) {
+  
+  files_full <- list.files(directory, full.names=TRUE)
+  dat <- data.frame()
+  compcas <- data.frame()
+    
+  for(i in id){
+    dat <- rbind(dat, read.csv(files_full[i]))
+
+  }    
+  
+  for(j in id) {
+
+    dat_subset <- dat[which(dat[,"ID"]==j), ]
+    nobs <- sum(complete.cases(dat_subset))
+    compcas <- rbind(compcas, cbind(j, nobs))
+  }
+  colnames(compcas) <- c("id", "nobs")
+  compcas
+  
+}
